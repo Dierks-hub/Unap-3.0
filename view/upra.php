@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/2.1.3/css/dataTables.bootstrap5.css">
 </head>
 
-<body class="bg-light d-flex flex-column min-min-vh-100" data-bs-theme="light">
+<body class="bg-light d-flex flex-column min-vh-100" data-bs-theme="light">
     <?php
     include_once("layouts/offcanvas.html");
     ?>
