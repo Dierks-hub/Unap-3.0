@@ -31,16 +31,16 @@
                             <div class="col-md-4 mb-2 mb-md-0">
                                 <div class="btn-group w-100" role="group" aria-label="Basic example">
                                     <input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
-                                    <label class="btn btn-outline-primary w-50" for="success-outlined"><i class="fas fa-user-graduate"></i>
+                                    <label class="btn btn-outline-primary" for="success-outlined"><i class="fas fa-user-graduate"></i>
                                     </label>
                                     <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
-                                    <label class="btn btn-outline-primary w-50" for="danger-outlined"><i class="fas fa-chalkboard-teacher"></i>
+                                    <label class="btn btn-outline-primary" for="danger-outlined"><i class="fas fa-chalkboard-teacher"></i>
                                     </label>
                                 </div>
                             </div>
                             <div class="col-md-8 mb-2 mb-md-0">
                                 <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="RUN" aria-label="Username" aria-describedby="basic-addon1">
+                                    <input type="text" class="form-control" id="run" placeholder="RUN" aria-label="Username" aria-describedby="basic-addon1">
                                     <button class="btn btn-primary"><i class="bi bi-search"></i></button>
                                 </div>
                             </div>
@@ -51,7 +51,7 @@
         </div>
         <div class="row mb-2 mt-1 d-flex justify-content-center">
             <div class="col-md-8">
-                <div class="card shadow-sm">
+                <div class="card shadow-sm" id="student-info">
                     <h5 class=" card-header">
                         <div class="row">
                             <div class="col">
@@ -80,12 +80,12 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div id="carouselExample" class="carousel carousel-dark slide" data-bs-interval="false">
+        <div class="row mb-2">
+            <div id="carrusel-student" class="carousel carousel-dark slide" data-bs-interval="false">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="row d-flex justify-content-center">
-                            <div class="col-md-2">
+                            <div class="col-md-2 mb-2">
                                 <div class="card shadow-sm small-card hover-effect">
                                     <div class="card-body d-flex align-items-center stylecard">
                                         <div class="me-3">
@@ -99,7 +99,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-2 mb-2">
                                 <div class="card shadow-sm small-card hover-effect">
                                     <div class="card-body d-flex align-items-center stylecard">
                                         <div class="me-3">
@@ -113,7 +113,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-2 mb-2">
                                 <div class="card shadow-sm small-card hover-effect">
                                     <div class="card-body d-flex align-items-center stylecard">
                                         <div class="me-3">
@@ -128,7 +128,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-2 mb-2">
                                 <div class="card shadow-sm small-card hover-effect">
                                     <div class="card-body d-flex align-items-center stylecard">
                                         <div class="me-3">
@@ -146,7 +146,7 @@
                     </div>
                     <div class="carousel-item">
                         <div class="row d-flex justify-content-center">
-                            <div class="col-md-2">
+                            <div class="col-md-2 mb-2">
                                 <div class="card shadow-sm small-card hover-effect">
                                     <div class="card-body d-flex align-items-center stylecard">
                                         <div class="me-3">
@@ -160,7 +160,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-2 mb-2">
                                 <div class="card shadow-sm small-card hover-effect">
                                     <div class="card-body d-flex align-items-center stylecard">
                                         <div class="me-3">
@@ -174,7 +174,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-2 mb-2">
                                 <div class="card shadow-sm small-card hover-effect">
                                     <div class="card-body d-flex align-items-center stylecard">
                                         <div class="me-3">
@@ -188,7 +188,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-2 mb-2">
                                 <div class="card shadow-sm small-card hover-effect">
                                     <div class="card-body d-flex align-items-center stylecard">
                                         <div class="me-3">
@@ -206,7 +206,7 @@
                     </div>
                     <div class="carousel-item">
                         <div class="row d-flex justify-content-center">
-                            <div class="col-md-2">
+                            <div class="col-md-2 mb-2">
                                 <div class="card shadow-sm small-card hover-effect">
                                     <div class="card-body d-flex align-items-center stylecard">
                                         <div class="me-3">
@@ -223,7 +223,7 @@
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <button class="carousel-control-prev p-0" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon " aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
@@ -235,7 +235,7 @@
         </div>
         <div class="row mt-2 d-flex justify-content-center">
             <div class="col-md-11">
-                <div class="card">
+                <div class="card" id="datos-academicos">
                     <div class="card-header">
                         <div class="row d-flex justify-items-between">
                             <div class="col-md-8">
@@ -353,30 +353,8 @@
             },
             searching: true,
             ordering: true,
-            language: {
-                "decimal": "",
-                "emptyTable": "No hay informacion para mostrar",
-                "info": "Mostrando _START_ a _END_ de _TOTAL_ items",
-                "infoEmpty": "Mostrando 0 a 0 de 0 items",
-                "infoFiltered": "(Filtrado de _MAX_ items totales)",
-                "infoPostFix": "",
-                "thousands": ",",
-                "lengthMenu": "Mostrar _MENU_ items",
-                "loadingRecords": "Cargando...",
-                "processing": "",
-                "search": "Buscar:",
-                "zeroRecords": "No se encontraron registros coincidentes",
-                "paginate": {
-                    first: "Primero",
-                    previous: "Anterior",
-                    next: "Siguiente",
-                    last: "Ultima"
-                },
-                "aria": {
-                    "orderable": "Ordenar esta columna",
-                    "orderableReverse": "Revertir el orden de esta columna"
-                }
-
+            'language': {
+                'url': 'https://cdn.datatables.net/plug-ins/1.10.22/i18n/Spanish.json'
             },
         });
     </script>
@@ -399,6 +377,86 @@
                 }
             })
         });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#student-info").hide();
+            $("#carrusel-student").hide();
+            $("#datos-academicos").hide();
+        });
+
+        
+
+        function cargarinfo() {
+            
+        }
+
+        function validaInputRut(e) {
+            var key = window.Event ? e.which : e.keyCode;
+            return ((key >= 48 && key <= 57) || (key == 8) || (key == 13) || (key == 45) || (key == 46) || (key == 107))
+        }
+
+        function valida_rut(elemento) {
+            var texto = elemento.value;
+            var tmpstr = "";
+            for (i = 0; i < texto.length; i++)
+                if (texto.charAt(i) != ' ' && texto.charAt(i) != '.' &&
+                    texto.charAt(i) != '-')
+                    tmpstr = tmpstr + texto.charAt(i);
+            texto = tmpstr;
+            largo = texto.length;
+            if (texto != '') {
+                if (largo < 8) {
+                    //return "Debe ingresar el rut completo.-";
+                    return false;
+                }
+            }
+
+            for (i = 0; i < largo; i++) {
+                if (texto.charAt(i) != "0" && texto.charAt(i) != "1" &&
+                    texto.charAt(i) != "2" && texto.charAt(i) != "3" &&
+                    texto.charAt(i) != "4" && texto.charAt(i) != "5" &&
+                    texto.charAt(i) != "6" && texto.charAt(i) != "7" &&
+                    texto.charAt(i) != "8" && texto.charAt(i) != "9" &&
+                    texto.charAt(i) != "k" && texto.charAt(i) != "K") {
+                    elemento.focus();
+                    elemento.select();
+                    //return "El valor ingresado no corresponde a un R.U.T valido.";
+                    return false;
+                }
+            }
+
+            var invertido = "";
+            for (i = (largo - 1), j = 0; i >= 0; i--, j++)
+                invertido = invertido + texto.charAt(i);
+            var dtexto = "";
+            dtexto = dtexto + invertido.charAt(0);
+            dtexto = dtexto + '-';
+            cnt = 0;
+
+            for (i = 1, j = 2; i < largo; i++, j++) {
+                // alert("i=[" + i + "] j=[" + j +"]" );
+                if (cnt == 3) {
+                    dtexto = dtexto + '.';
+                    j++;
+                    dtexto = dtexto + invertido.charAt(i);
+                    cnt = 1;
+                } else {
+                    dtexto = dtexto + invertido.charAt(i);
+                    cnt++;
+                }
+            }
+
+            invertido = "";
+            for (i = (dtexto.length - 1), j = 0; i >= 0; i--, j++)
+                invertido = invertido + dtexto.charAt(i);
+
+            elemento.value = invertido.toUpperCase();
+
+            var resp = revisar_digito(elemento, texto);
+            return resp;
+
+        }
     </script>
 
 </body>
