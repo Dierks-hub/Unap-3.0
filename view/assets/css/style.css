@@ -1,0 +1,81 @@
+/* Color más oscuro */
+.bg-black {
+    background-color: #000000 !important;
+}
+
+.color-black {
+    color: #000000 !important;
+}
+
+.bg-unap-dark {
+    background-color: #44546A !important;
+}
+
+.color-unap-dark {
+    color: #44546A !important;
+}
+
+.bg-unap-blue {
+    background-color: #0069B1 !important;
+}
+
+.color-unap-blue {
+    color: #0069B1 !important;
+}
+
+.bg-unap-green {
+    background-color: #009CA6 !important;
+}
+
+.color-unap-green {
+    color: #009CA6 !important;
+}
+
+/* Color más claro */
+.bg-white {
+    background-color: #FFFFFF !important;
+}
+
+.color-white {
+    color: #FFFFFF !important;
+}
+body{
+    /* min-height: 100vh;
+    padding-bottom: 50px;
+    */ 
+    background: #F5F5F5;
+}
+.stylenavbar{
+    background-color: #0069B1;
+}
+#offcanvasScrolling {
+    width: 250px; /* Ancho personalizado */
+}
+
+.bg-mi-color {
+    background-color: #313a46;
+}
+.btn-offcanvas {
+    background-color: #e9edf0; 
+    border-color: #313a46;
+    color: #8391a2;
+  }
+  
+  .btn-offcanvas:hover {
+    background-color: #8391a2; /* Color del hover */
+    border-color: #2f3642; /* Color del borde en hover */
+    color: #ffffff; /* Color del texto en hover */
+  }
+/* CSS adicional para el efecto de hover */
+.hover-effect:hover {
+    background-color: #f8f9fa; /* Cambia el color de fondo en el hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Agrega una sombra más grande en el hover */
+}
+.stylecard{
+    height: 130px;
+}
+.stylecard:hover{
+    background-color: #009CA6; /* Color del hover */
+    border-color: #2f3642; /* Color del borde en hover */
+    color: #ffffff; /* Color del texto en hover */
+}
