@@ -41,7 +41,7 @@
                             <div class="col-md-8 mb-2 mb-md-0">
                                 <div class="input-group">
                                     <input type="text" class="form-control" id="run" placeholder="RUN" aria-label="Username" aria-describedby="basic-addon1">
-                                    <button class="btn btn-primary"><i class="bi bi-search"></i></button>
+                                    <button class="btn btn-primary" id="buscar"><i class="bi bi-search"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -68,11 +68,11 @@
                             </div>
                             <div class="col-md-7 d-flex justify-content-center">
                                 <ul class="list-unstyled">
-                                    <li><strong>Nombre:</strong> Jaime David Guszman Rojas</li>
-                                    <li><strong>RUT:</strong> 12345678-9</li>
-                                    <li><strong>Email:</strong> <a href="mailto:jaime@example.com">jaime@example.com</a></li>
-                                    <li><strong>Celular:</strong> +56 9 8765 4321</li>
-                                    <li><strong>Telefono:</strong> +56 9 8765 4321</li>
+                                    <li id="nombre"><strong>Nombre:</strong></li>
+                                    <li id="run1"><strong>RUT:</strong></li>
+                                    <li id="email"><strong>Email:</strong><a href=""></a></li>
+                                    <li id="telefono-movil"><strong>Celular:</strong></li>
+                                    <li id="telefono-fijo"><strong>Telefono:</strong></li>
                                 </ul>
                             </div>
                         </div>
@@ -81,7 +81,7 @@
             </div>
         </div>
         <div class="row mb-2">
-            <div id="carrusel-student" class="carousel carousel-dark slide" data-bs-interval="false">
+            <div id="carouselExample" class="carousel carousel-dark slide" data-bs-interval="false">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="row d-flex justify-content-center">
@@ -381,20 +381,47 @@
     <script>
         $(document).ready(function() {
             $("#student-info").hide();
-            $("#carrusel-student").hide();
+            $("#carouselExample").hide();
             $("#datos-academicos").hide();
+
+            cargarinfo()
         });
-
-        
-
-        function cargarinfo() {
-            
-        }
 
         function validaInputRut(e) {
             var key = window.Event ? e.which : e.keyCode;
             return ((key >= 48 && key <= 57) || (key == 8) || (key == 13) || (key == 45) || (key == 46) || (key == 107))
         }
+
+        function cargarinfo() {
+            $("#buscar").on("click", function() {
+                $.ajax({
+                    url: "llenar_datos.php",
+                    type: "POST",
+                    dataType: "json",
+                    data: {
+                        var1: $("#run").val(),
+                    },
+                    success: function(response) {
+                        console.log(response);
+                        $("#student-info").show("slow");
+                        $("#carouselExample").show("slow");
+
+                        $("#nombre").html("<strong>Nombre:</strong> " + response.datos.nombre);
+                        $("#run1").html("<strong>RUT:</strong> " + response.datos.run);
+                        $("#email").html("<strong>Email:</strong> " + response.datos.email);
+                        $("#telefono-movil").html("<strong>Telefono Movil:</strong> " + response.datos.celular);
+                        $("#telefono-fijo").html("<strong>Telefono Fijo:</strong> " + response.datos.telefono);
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Error en la solicitud AJAX:", status, error);
+                    }
+                })
+
+            })
+        };
+        cargarinfo();
+
+
 
         function valida_rut(elemento) {
             var texto = elemento.value;
